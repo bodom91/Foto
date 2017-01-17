@@ -3,6 +3,7 @@ package com.dnsFoto.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -12,6 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "users")
 public class Users {
+    @Id
     @Column(name = "username", unique = true, nullable = false)
     private String username;
 
