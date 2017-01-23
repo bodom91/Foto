@@ -5,6 +5,6 @@
 </head>
 <body>
 HELLO
-${name}
+${name} ${privacy} ${city}
 </body>
 </html>

@@ -2,6 +2,7 @@ package com.dnsFoto.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -10,10 +11,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "shop")
 public class Shop {
-    @Column
+    @Column(name = "name")
     private String name;
-    @Column
+    @Id
+    @Column(name = "id")
     private int id;
+    @Column(name = "city")
+    private String city;
 
     public String getName() {
         return name;
@@ -29,5 +33,13 @@ public class Shop {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }

@@ -8,9 +8,10 @@ import javax.persistence.*;
 @Entity
 @Table(name = "city")
 public class City {
-    @Column
+    @Column(name = "name")
     private String name;
-    @Column
+    @Column(name = "id")
+    @PrimaryKeyJoinColumn
     private int id;
 
     public String getName() {
