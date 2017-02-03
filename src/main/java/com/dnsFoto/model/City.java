@@ -1,5 +1,7 @@
 package com.dnsFoto.model;
 
+import org.springframework.context.annotation.Primary;
+
 import javax.persistence.*;
 
 /**
@@ -10,8 +12,8 @@ import javax.persistence.*;
 public class City {
     @Column(name = "name")
     private String name;
+    @Id
     @Column(name = "id")
-    @PrimaryKeyJoinColumn
     private int id;
 
     public String getName() {

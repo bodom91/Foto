@@ -20,13 +20,6 @@ public class Users {
     @Column(name = "enabled", nullable = false)
     private boolean enabled;
 
-    @OneToOne
-    @JoinColumn(name = "city")
-    private City city;
-
-    @Column(name = "shop")
-    private Shop shop;
-
     public String getUsername() {
         return username;
     }
@@ -47,23 +40,17 @@ public class Users {
         return enabled;
     }
 
+    @Override
+    public String toString() {
+        return "Users{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", enabled=" + enabled +
+                '}';
+    }
+
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
 
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
-
-    public Shop getShop() {
-        return shop;
-    }
-
-    public void setShop(Shop shop) {
-        this.shop = shop;
-    }
 }
